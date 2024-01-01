@@ -4,7 +4,7 @@ from urllib import request
 from terminalcolors import tcolor, color_text
 
 # =======================================================================
-# call the /prompt endpoint (POST)
+# call the /prompt endpoint (POST), add a job to the queue
 def queue_prompt(prompt_workflow, server_address, client_id):
     request_payload = {"prompt": prompt_workflow, "client_id": client_id}
     json_payload = json.dumps(request_payload).encode('utf-8')
@@ -14,7 +14,7 @@ def queue_prompt(prompt_workflow, server_address, client_id):
     # send request and get the response
     with request.urlopen(prompt_req) as response:
         response_content = response.read()
-        return json.loads(response_content) # return prompt_id
+        return json.loads(response_content) # return response content
 
 # =======================================================================
 # get a node via its title
@@ -68,7 +68,7 @@ def run(server_address, client_id):
     chkpoint_loader_node["inputs"]["ckpt_name"] = path
     empty_latent_img_node["inputs"]["width"] = 512
     empty_latent_img_node["inputs"]["height"] = 640
-    empty_latent_img_node["inputs"]["batch_size"] = 4
+    empty_latent_img_node["inputs"]["batch_size"] = 6
 
     # store prompt id for each job when added to queue
     prompt_id_list = []
@@ -78,7 +78,7 @@ def run(server_address, client_id):
         prompt_pos_node["inputs"]["text"] = prompt
         ksampler_node["inputs"]["seed"] = random.randint(1, 18446744073709551614)
         # high steps to slow things down a bit
-        ksampler_node["inputs"]["steps"] = 50
+        ksampler_node["inputs"]["steps"] = 60
         file_prefix = prompt[:100]
         save_image_node["inputs"]["filename_prefix"] = file_prefix
 
