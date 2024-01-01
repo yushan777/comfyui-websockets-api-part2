@@ -1,0 +1,708 @@
+{
+  "queue_running": [
+    [
+      56,
+      "cf401c91-7287-41ff-87ec-93653016601c",
+      {
+        "3": {
+          "inputs": {
+            "seed": 7021230959696479797,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 640,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "photo of a man sitting in a cafe",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "photo of a man sitting in a cafe",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ]
+  ],
+  "queue_pending": [
+    [
+      57,
+      "883a0306-6d8d-4a31-b8ed-bfcd658286af",
+      {
+        "3": {
+          "inputs": {
+            "seed": 11548159736404917330,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 640,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "photo of a woman standing in the middle of a busy street",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "photo of a woman standing in the middle of a busy street",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ],
+    [
+      58,
+      "b50bb667-7251-428e-b091-eff9c6c453e6",
+      {
+        "3": {
+          "inputs": {
+            "seed": 2407158468308013608,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 640,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "drawing of a cat sitting in a tree",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "drawing of a cat sitting in a tree",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ],
+    [
+      59,
+      "cc717b8c-8d04-4d1d-b37f-426c0f566bd0",
+      {
+        "3": {
+          "inputs": {
+            "seed": 15688349112293284799,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 768,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "beautiful scenery nature glass bottle landscape, purple galaxy bottle",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "beautiful scenery nature glass bottle landscape, purple galaxy bottle",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ],
+    [
+      60,
+      "8bdd04c5-0b15-4694-a2ee-58ad0646ebfd",
+      {
+        "3": {
+          "inputs": {
+            "seed": 4188993285897094161,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 768,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "beach on a sunny day",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "beach on a sunny day",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ],
+    [
+      61,
+      "f92210f7-f156-4386-8a05-4c9e54ab9fc0",
+      {
+        "3": {
+          "inputs": {
+            "seed": 10664486071537907853,
+            "steps": 20,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Checkpoint Loader"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 768,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "a scene inside a snow globe",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "a scene inside a snow globe",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Image Saver"
+          }
+        }
+      },
+      {
+        "client_id": "8eda1267-4093-41b9-b486-20008e249f4a"
+      },
+      [
+        "9"
+      ]
+    ]
+  ]
+}
