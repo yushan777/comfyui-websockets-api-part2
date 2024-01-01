@@ -1,0 +1,54 @@
+endpoints:
+
+@routes.get('/ws')
+
+@routes.get("/")
+
+@routes.get("/embeddings")
+
+@routes.get("/extensions")
+returns list of core and custom extensions in javascript format.
+
+@routes.get("/view")
+get image to view
+
+@routes.get("/view_metadata/{folder_name}")
+??
+
+@routes.get("/system_stats")
+server system stats
+
+@routes.get("/prompt")
+only really returns total number of queue items remaining
+
+@routes.get("/object_info")
+outputs information on all available nodes
+
+@routes.get("/object_info/{node_class}")
+outputs information on a specific node given the class name
+
+@routes.get("/history")
+# Gets the history of all completed jobs (prompts) and their outputs
+
+@routes.get("/history/{prompt_id}")
+# Gets the history of a completed job (prompt) and it output based on a prompt_id
+
+@routes.get("/queue")
+gets queue running and queue pending
+
+@routes.post("/prompt")
+posts your prompt and adds to queue
+
+@routes.post("/queue")
+clears entire pending queue
+delete a specific item in the pending queue
+
+@routes.post("/interrupt")
+interrupts the current running workflow job
+
+@routes.post("/history")
+# Similar to post_queue (clear/delete). clear the entire history or delete a specific job from history
+
+@routes.post("/upload/image")
+
+@routes.post("/upload/mask")

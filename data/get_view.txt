@@ -1,0 +1,8 @@
+parameters that can be included when making a GET request to the /view endpoint:
+
+filename: The name of the file you want to view.
+type (optional): Specifies the type of output (default is "output").
+subfolder (optional): Allows you to specify a subfolder within the output directory.
+preview (optional): Allows you to generate a preview of the image with specific settings, such as format and quality.
+channel (optional): Specifies the image channel to view (e.g., "rgba", "rgb", "a").
+

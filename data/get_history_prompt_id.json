@@ -1,0 +1,174 @@
+{
+  "857405f2-dd5d-4a37-9d20-5c01935c5b00": {
+    "prompt": [
+      278,
+      "857405f2-dd5d-4a37-9d20-5c01935c5b00",
+      {
+        "3": {
+          "inputs": {
+            "seed": 18171808168074281850,
+            "steps": 50,
+            "cfg": 8.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 1.0,
+            "model": [
+              "4",
+              0
+            ],
+            "positive": [
+              "6",
+              0
+            ],
+            "negative": [
+              "7",
+              0
+            ],
+            "latent_image": [
+              "5",
+              0
+            ]
+          },
+          "class_type": "KSampler",
+          "_meta": {
+            "title": "KSampler"
+          }
+        },
+        "4": {
+          "inputs": {
+            "ckpt_name": "SD1-5/sd_v1-5_vae.ckpt"
+          },
+          "class_type": "CheckpointLoaderSimple",
+          "_meta": {
+            "title": "Load Checkpoint"
+          }
+        },
+        "5": {
+          "inputs": {
+            "width": 512,
+            "height": 768,
+            "batch_size": 3
+          },
+          "class_type": "EmptyLatentImage",
+          "_meta": {
+            "title": "Empty Latent Image"
+          }
+        },
+        "6": {
+          "inputs": {
+            "text": "a scene inside a micro environment ",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Pos Prompt"
+          }
+        },
+        "7": {
+          "inputs": {
+            "text": "text, watermark",
+            "clip": [
+              "4",
+              1
+            ]
+          },
+          "class_type": "CLIPTextEncode",
+          "_meta": {
+            "title": "Neg Prompt"
+          }
+        },
+        "8": {
+          "inputs": {
+            "samples": [
+              "3",
+              0
+            ],
+            "vae": [
+              "4",
+              2
+            ]
+          },
+          "class_type": "VAEDecode",
+          "_meta": {
+            "title": "VAE Decode"
+          }
+        },
+        "9": {
+          "inputs": {
+            "filename_prefix": "a scene inside a micro environment ",
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "SaveImage",
+          "_meta": {
+            "title": "Save Image"
+          }
+        },
+        "10": {
+          "inputs": {
+            "images": [
+              "8",
+              0
+            ]
+          },
+          "class_type": "PreviewImage",
+          "_meta": {
+            "title": "Preview Image"
+          }
+        }
+      },
+      {
+        "client_id": "a1d5f5e8-a086-4278-89a8-bc5df360ab27"
+      },
+      [
+        "10",
+        "9"
+      ]
+    ],
+    "outputs": {
+      "10": {
+        "images": [
+          {
+            "filename": "ComfyUI_temp_tgmti_00025_.png",
+            "subfolder": "",
+            "type": "temp"
+          },
+          {
+            "filename": "ComfyUI_temp_tgmti_00026_.png",
+            "subfolder": "",
+            "type": "temp"
+          },
+          {
+            "filename": "ComfyUI_temp_tgmti_00027_.png",
+            "subfolder": "",
+            "type": "temp"
+          }
+        ]
+      },
+      "9": {
+        "images": [
+          {
+            "filename": "a scene inside a micro environment _00031_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          {
+            "filename": "a scene inside a micro environment _00032_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          {
+            "filename": "a scene inside a micro environment _00033_.png",
+            "subfolder": "",
+            "type": "output"
+          }
+        ]
+      }
+    }
+  }
+}

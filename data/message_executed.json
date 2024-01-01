@@ -1,0 +1,30 @@
+{
+    "type": "executed",
+    "data": {
+        "node": "9",
+        "output": {
+            "images": [
+                {
+                    "filename": "xxxx01.png",
+                    "subfolder": "",
+                    "type": "output"
+                },
+                {
+                    "filename": "xxxx02.png",
+                    "subfolder": "",
+                    "type": "output"
+                },
+                {
+                    "filename": "xxxx03.png",
+                    "subfolder": "",
+                    "type": "output"
+                },
+                {
+                    "filename": "xxxx04.png",
+                    "subfolder": "",
+                    "type": "output"
+                }
+            ]
+        }
+    }
+}
