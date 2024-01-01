@@ -1,54 +1,66 @@
-endpoints:
+Endpoints:
 
 @routes.get('/ws')
+# Called when establishing a ws connection
 
 @routes.get("/")
+# Serves index.html file when the root URL is accessed
 
 @routes.get("/embeddings")
+# Returns list of embeddings in embeddings folder
 
 @routes.get("/extensions")
-returns list of core and custom extensions in javascript format.
+# Returns list of core and custom extensions in javascript.
 
 @routes.get("/view")
-get image to view
+# Get image to view, get history first, select filename, load that image.
 
 @routes.get("/view_metadata/{folder_name}")
-??
+# Takes in folder name and safetensors file, and returns 
+# metadata (model hashes, recipes, and parameters etc)
+# Not all files will contain metadata. some might just return {"format": "pt"}
 
 @routes.get("/system_stats")
-server system stats
+# Server system stats
 
 @routes.get("/prompt")
-only really returns total number of queue items remaining
+# Only really returns total number of queue items remaining
 
 @routes.get("/object_info")
-outputs information on all available nodes
+# Outputs information on all available nodes inc. custom nodes
 
 @routes.get("/object_info/{node_class}")
-outputs information on a specific node given the class name
+# Outputs information on a specific node given the class name
 
 @routes.get("/history")
-# Gets the history of all completed jobs (prompts) and their outputs
+# Gets the history of all completed jobs (prompts) and 
+# their outputs (saved files)
 
 @routes.get("/history/{prompt_id}")
-# Gets the history of a completed job (prompt) and it output based on a prompt_id
+# Gets the history of a completed job (prompt) 
+# and its output based on a prompt_id
 
 @routes.get("/queue")
-gets queue running and queue pending
+# Gets queues (running and pending)
 
 @routes.post("/prompt")
-posts your prompt and adds to queue
+# Posts your prompt/workflow and adds to queue 
+# The one we've been using this whole time)
 
 @routes.post("/queue")
-clears entire pending queue
-delete a specific item in the pending queue
+# Clears entire pending queue
+# Or delete a specific item in the pending queue
 
 @routes.post("/interrupt")
-interrupts the current running workflow job
+# Interrupts the current running job
 
 @routes.post("/history")
-# Similar to post_queue (clear/delete). clear the entire history or delete a specific job from history
+# Similar to queue(POST) (clear/delete). Clears the entire history 
+# Or deletes a specific job from history
 
 @routes.post("/upload/image")
+# Upload an image places it in input folder
 
 @routes.post("/upload/mask")
+# Upload an image mask merges it with a specified image that already exist
+# and saves it
