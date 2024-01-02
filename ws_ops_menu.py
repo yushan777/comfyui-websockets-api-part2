@@ -9,9 +9,6 @@ from PIL import Image
 from pynput import keyboard
 from tqdm import tqdm
 
-#  endpoints
-# https://github.com/comfyanonymous/ComfyUI/blob/61b3f15f8f2bc0822cb98eac48742fb32f6af396/server.py#L97
-
 # Global flag to help stop show_progress()
 interrupt_flag = False
 
@@ -522,13 +519,6 @@ def get_node_class(node_id):
 # ===================================================================================
 # Main function to handle command line arguments
 def run(ws, server_address):
-
-    # # Generate a unique client ID
-    # client_id = str(uuid.uuid4())
-    #
-    # # Establish a WebSocket connection
-    # # ws = websocket.WebSocket()
-    # # ws.connect(f"ws://{server_address}/ws?clientId={client_id}")
 
     menu_items = [
         "[1] System Stats",
